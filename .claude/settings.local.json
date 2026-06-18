@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills *)",
+      "Bash(python .agents/scripts/office/unpack.py brief.docx brief_unpacked/)",
+      "Bash(pandoc \"E:\\\\projects\\\\PM\\\\brief.docx\" -t markdown)",
+      "Bash(python -c ' *)",
+      "PowerShell(New-Item -ItemType Directory -Force \"E:\\\\projects\\\\PM\\\\assets\\\\css\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"E:\\\\projects\\\\PM\\\\assets\\\\js\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"E:\\\\projects\\\\PM\\\\assets\\\\images\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"E:\\\\projects\\\\PM\\\\assets\\\\videos\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"E:\\\\projects\\\\PM\\\\de\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"E:\\\\projects\\\\PM\\\\ru\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 -c ' *)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
+    ]
+  }
+}

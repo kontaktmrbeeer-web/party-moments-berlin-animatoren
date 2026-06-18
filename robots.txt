@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Legal pages are noindex in HTML — also block crawling here
+Disallow: /de/impressum.html
+Disallow: /ru/impressum.html
+Disallow: /de/datenschutz.html
+Disallow: /ru/datenschutz.html
+
+Sitemap: https://party-moments-animatoren.de/sitemap.xml

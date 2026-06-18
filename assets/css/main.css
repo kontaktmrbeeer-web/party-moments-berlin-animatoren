@@ -1,0 +1,135 @@
+/* ============================================================
+   PartyMoments Berlin — Shared Base CSS
+   CSS custom properties, reset, typography scale.
+   ============================================================ */
+
+/* Google Fonts loaded conditionally via JS (cookie consent) */
+/* Fallback font stacks shown until/unless consent is granted  */
+
+/* --- Brand color tokens ------------------------------------ */
+:root {
+  --color-dark:         #0d0025;
+  --color-purple:       #7c3aed;
+  --color-lavender:     #b48ef0;
+  --color-pink-bright:  #db2777;
+  --color-pink-soft:    #f472b6;
+  --color-yellow:       #F2E63A;
+  --color-gold:         #c9953a;
+  --color-white:        #FFFFFF;
+
+  /* Semantic aliases */
+  --color-bg:           var(--color-dark);
+  --color-text:         var(--color-white);
+  --color-accent:       var(--color-purple);
+  --color-cta:          var(--color-pink-bright);
+  --color-highlight:    var(--color-yellow);
+
+  /* Typography scale (rem, base 16px) */
+  --font-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-heading: 'Poppins', 'Trebuchet MS', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  --fs-xs:   0.75rem;   /*  12px */
+  --fs-sm:   0.875rem;  /*  14px */
+  --fs-base: 1rem;      /*  16px */
+  --fs-md:   1.125rem;  /*  18px */
+  --fs-lg:   1.25rem;   /*  20px */
+  --fs-xl:   1.5rem;    /*  24px */
+  --fs-2xl:  2rem;      /*  32px */
+  --fs-3xl:  2.5rem;    /*  40px */
+  --fs-4xl:  3rem;      /*  48px */
+  --fs-5xl:  3.75rem;   /*  60px */
+
+  /* Spacing scale (4-point grid) */
+  --sp-1:  0.25rem;   /*  4px */
+  --sp-2:  0.5rem;    /*  8px */
+  --sp-3:  0.75rem;   /* 12px */
+  --sp-4:  1rem;      /* 16px */
+  --sp-5:  1.25rem;   /* 20px */
+  --sp-6:  1.5rem;    /* 24px */
+  --sp-8:  2rem;      /* 32px */
+  --sp-10: 2.5rem;    /* 40px */
+  --sp-12: 3rem;      /* 48px */
+  --sp-16: 4rem;      /* 64px */
+  --sp-20: 5rem;      /* 80px */
+  --sp-24: 6rem;      /* 96px */
+
+  /* Border radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* Z-index scale */
+  --z-base:    0;
+  --z-above:   10;
+  --z-sticky:  100;
+  --z-modal:   200;
+  --z-overlay: 300;
+  --z-toast:   400;
+}
+
+/* --- Minimal reset ----------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* --- Utility: visually hidden (screen-reader only) --------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
