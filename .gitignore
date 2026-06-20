@@ -3,3 +3,5 @@ Thumbs.db
 *.log
 skills-lock.json
 brief.docx
+.agents/
+.claude/
