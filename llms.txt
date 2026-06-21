@@ -25,10 +25,10 @@ PartyMoments Berlin ist ein professioneller Event- und Unterhaltungsservice in B
 
 ## Languages
 
-- Deutsch: https://party-moments-animatoren.de/de/
-- Русский: https://party-moments-animatoren.de/ru/
-- Українська: https://party-moments-animatoren.de/ua/
+- [Deutsch](https://party-moments-animatoren.de/de/)
+- [Русский](https://party-moments-animatoren.de/ru/)
+- [Українська](https://party-moments-animatoren.de/ua/)
 
 ## Sitemap
 
-https://party-moments-animatoren.de/sitemap.xml
+- [sitemap.xml](https://party-moments-animatoren.de/sitemap.xml)
