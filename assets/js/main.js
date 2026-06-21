@@ -7,13 +7,16 @@
 // GSAP + ScrollTrigger are loaded via CDN in each HTML file.
 // This file is the shared bootstrap run on every page.
 
-// ── Responsive video source swap (runs before DOMContentLoaded) ──
+// ── Responsive video source + poster swap (runs before DOMContentLoaded) ──
 (function () {
   var isMob = window.matchMedia('(max-width: 768px)').matches;
   document.querySelectorAll('video[data-mob-src]').forEach(function (v) {
     var src = v.querySelector('source');
     if (!src) return;
     src.src = isMob ? v.dataset.mobSrc : v.dataset.deskSrc;
+    if (v.dataset.mobPoster) {
+      v.poster = isMob ? v.dataset.mobPoster : (v.dataset.deskPoster || '');
+    }
     v.load();
   });
 }());
