@@ -1,65 +1,34 @@
-# PartyMoments Berlin Animatoren
+# PartyMoments Berlin
 
-> Professional party entertainers, costume rental and candy bouquets in Berlin, Germany.
-> Contact via WhatsApp: +49 176 20488050
-> Website: https://party-moments-animatoren.de
-> Languages: German (primary), Russian
-
-## About
-
-PartyMoments Berlin Animatoren is a Berlin-based entertainment company specialising in
-children's birthday parties, family celebrations, weddings and corporate events.
-The team provides professional animators (mascot characters), costume rental and
-handcrafted candy bouquets / gift boxes. All services are available in German and Russian.
+> Professionelle Party-Animatoren, Kostümverleih und süße Sträuße in Berlin. Wir gestalten unvergessliche Momente für Kindergeburtstage, Familienfeiern, Hochzeiten und Firmenevents.
 
 ## Services
 
-- **Animators Berlin** (Animatoren Berlin / Аниматоры Берлин) — professional costumed
-  entertainers and mascots for children's birthdays and family events. From 85 €.
-  Page (DE): https://party-moments-animatoren.de/de/animatoren-berlin.html
-  Page (RU): https://party-moments-animatoren.de/ru/animatory-berlin.html
+- [Party-Animation & Maskottchen](https://party-moments-animatoren.de/de/animatoren-berlin): Professionelle Animatoren und Maskottchen für Kindergeburtstage, Familienfeiern und besondere Überraschungen in Berlin – mit Tanz, Musik, Fotos und echten Wow-Momenten. Ab 85 €.
+- [Süße Sträuße & Geschenkboxen](https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin): Handgefertigte süße Sträuße aus Süßigkeiten und kreative Geschenkboxen für jeden Anlass in Berlin. Ab 25 €.
+- [Kostümverleih Berlin](https://party-moments-animatoren.de/de/kostuemverleih-berlin): Laufkostüme und Themenkostüme für Events, Geburtstage und Firmenveranstaltungen in Berlin. Auch ohne Animator buchbar.
 
-- **Candy Bouquets & Gift Boxes** (Süße Sträuße & Geschenkboxen / Сладкие букеты и боксы) —
-  handmade sweets bouquets and gift boxes, individually designed with favourite brands
-  and a personal message. From 39 €.
-  Page (DE): https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin.html
-  Page (RU): https://party-moments-animatoren.de/ru/sladkie-bukety-podarochnye-boksy-berlin.html
+## About
 
-- **Costume Rental Berlin** (Kostümverleih Berlin / Аренда костюмов Берлин) — mascot and
-  animal costumes for rent for birthdays, photo shoots and events. From 49 €.
-  Page (DE): https://party-moments-animatoren.de/de/kostuemverleih-berlin.html
-  Page (RU): https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin.html
+PartyMoments Berlin ist ein professioneller Event- und Unterhaltungsservice in Berlin. Wir bieten Party-Animation, Maskottchen-Auftritte, Kostümverleih und süße Geschenkarrangements für alle Arten von Feiern an.
 
-## Key Facts
+- Einsatzgebiet: Berlin & Umgebung
+- Preise ab: 25 €
+- Verfügbarkeit: 7 Tage die Woche, 00:00–23:59
+- Sprachen: Deutsch, Russisch, Ukrainisch
 
-- Location: Berlin, Germany (all districts) and surrounding area
-- Contact: WhatsApp +49 176 20488050 (fastest response)
-- Languages spoken: German, Russian
-- Price range: from 25 €
-- Over 100 happy guests served
+## Contact
 
-## Pages
+- WhatsApp: +49 176 20488050
+- Instagram: [@partymoments.berlin](https://www.instagram.com/partymoments.berlin/)
+- TikTok: [@partymoments.berlin](https://www.tiktok.com/@partymoments.berlin)
 
-- Homepage (DE): https://party-moments-animatoren.de/de/
-- Homepage (RU): https://party-moments-animatoren.de/ru/
-- Sitemap: https://party-moments-animatoren.de/sitemap.xml
+## Languages
 
----
+- Deutsch: https://party-moments-animatoren.de/de/
+- Русский: https://party-moments-animatoren.de/ru/
+- Українська: https://party-moments-animatoren.de/ua/
 
-## Auf Deutsch
+## Sitemap
 
-PartyMoments Berlin Animatoren ist ein Berliner Unterhaltungsunternehmen für
-Kindergeburtstage, Familienfeiern, Hochzeiten und Firmenevents. Das Team bietet
-professionelle Animatoren und Maskottchen, Kostümverleih sowie handgemachte
-Süßigkeitensträuße und Geschenkboxen. Alle Leistungen auf Deutsch und Russisch verfügbar.
-Kontakt per WhatsApp: +49 176 20488050. Preise ab 25 €.
-
----
-
-## По-русски
-
-PartyMoments Berlin Animatoren — берлинская компания по организации развлечений для
-детских дней рождения, семейных праздников, свадеб и корпоративов. Предлагаем
-профессиональных аниматоров и ростовых кукол, аренду костюмов, а также сладкие букеты
-и подарочные боксы ручной работы. Работаем на немецком и русском языках.
-Связь по WhatsApp: +49 176 20488050. Цены от 25 €.
+https://party-moments-animatoren.de/sitemap.xml
