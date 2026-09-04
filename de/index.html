@@ -48,7 +48,7 @@
     "description": "Professionelle Animatoren für Kindergeburtstag, Hochzeit und Firmenfeier in Berlin. Kostümverleih und süße Sträuße.",
     "telephone": "+4917620488050",
     "url": "https://party-moments-animatoren.de/de/",
-    "image": "https://party-moments-animatoren.de/assets/images/og-home-de.jpg",
+    "image": "https://party-moments-animatoren.de/assets/images/og-home.jpg",
     "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
     "areaServed": "Berlin und Umgebung",
     "priceRange": "ab 25 €",
@@ -112,13 +112,21 @@
     <section class="hero" aria-label="Willkommen bei PartyMoments Berlin">
       <div class="hero__media" aria-hidden="true">
         <video class="hero__video" autoplay muted loop playsinline preload="metadata"
-               poster="../images/hero-poster-mob.png"
                data-mob-src="../images/introMob.mp4"
                data-desk-src="../images/intro.mp4"
-               data-mob-poster="../images/hero-poster-mob.png"
-               data-desk-poster="../images/Hero-poster.png">
+               data-mob-poster="../images/hero-poster-mob.jpg"
+               data-desk-poster="../images/hero-poster.jpg">
           <source src="../images/intro.mp4" type="video/mp4">
         </video>
+        <script>
+          /* Pick the poster before first paint. Leaving it out of the markup
+             stops the browser preloading the wrong one and flashing it. */
+          (function () {
+            var v = document.currentScript.previousElementSibling;
+            v.poster = window.matchMedia("(max-width: 768px)").matches
+              ? v.dataset.mobPoster : v.dataset.deskPoster;
+          }());
+        </script>
         <div class="hero__overlay"></div>
         <div class="hero__overlay-dark"></div>
       </div>

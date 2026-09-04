@@ -29,6 +29,18 @@
 .breadcrumb__sep { opacity: 0.3; }
 .breadcrumb [aria-current] { color: rgba(255, 255, 255, 0.7); }
 
+/* Legal pages render the breadcrumb in normal flow instead of pinning it
+   over a hero, so the centring transform and full-bleed width must go too. */
+.breadcrumb--static {
+  position: static;
+  transform: none;
+  width: auto;
+  max-width: none;
+  padding: 0;
+  margin-bottom: var(--sp-6);
+  justify-content: center;
+}
+
 /* ── What's Included ────────────────────────────────────── */
 .included {
   background: #5B21B6;
