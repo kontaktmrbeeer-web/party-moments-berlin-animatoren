@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /
 
-# Legal pages are noindex in HTML — also block crawling here
-Disallow: /de/impressum.html
-Disallow: /ru/impressum.html
-Disallow: /de/datenschutz.html
-Disallow: /ru/datenschutz.html
+# Legal pages are noindex in HTML — also block crawling here.
+# The Instagram legal page is deliberately NOT blocked: it must stay
+# reachable from the Instagram bio (§ 5 DDG).
+Disallow: /de/impressum
+Disallow: /ru/impressum
+Disallow: /ua/impressum
+Disallow: /de/datenschutz
+Disallow: /ru/datenschutz
+Disallow: /ua/datenschutz
 
 Sitemap: https://party-moments-animatoren.de/sitemap.xml

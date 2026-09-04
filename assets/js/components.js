@@ -72,6 +72,7 @@
       contactColHead:   'Kontakt',
       impressumHref:    './impressum.html',
       datenschutzHref:  './datenschutz.html',
+      instagramLegalHref: './instagram.html',
       instagramLabel:   'PartyMoments Berlin auf Instagram',
       tiktokLabel:      'PartyMoments Berlin auf TikTok',
       phoneLabel:       'Anrufen: +49 176 20488050',
@@ -104,6 +105,7 @@
       contactColHead:   'Контакт',
       impressumHref:    './impressum.html',
       datenschutzHref:  './datenschutz.html',
+      instagramLegalHref: '../de/instagram.html',
       instagramLabel:   'PartyMoments Berlin в Instagram',
       tiktokLabel:      'PartyMoments Berlin в TikTok',
       phoneLabel:       'Позвонить: +49 176 20488050',
@@ -135,6 +137,7 @@
       contactColHead:   'Контакт',
       impressumHref:    './impressum.html',
       datenschutzHref:  './datenschutz.html',
+      instagramLegalHref: '../de/instagram.html',
       instagramLabel:   'PartyMoments Berlin в Instagram',
       tiktokLabel:      'PartyMoments Berlin в TikTok',
       phoneLabel:       'Зателефонувати: +49 176 20488050',
@@ -283,9 +286,9 @@
         <div class="footer__social">
           <a href="https://wa.me/4917620488050" class="footer__social-link"
              target="_blank" rel="noopener noreferrer" aria-label="${t.waLabel}">${IC.whatsapp}</a>
-          <a href="https://www.instagram.com/" class="footer__social-link"
+          <a href="https://www.instagram.com/partymoments.berlin/" class="footer__social-link"
              target="_blank" rel="noopener noreferrer" aria-label="${t.instagramLabel}">${IC.instagram}</a>
-          <a href="https://www.tiktok.com/" class="footer__social-link"
+          <a href="https://www.tiktok.com/@partymoments.berlin" class="footer__social-link"
              target="_blank" rel="noopener noreferrer" aria-label="${t.tiktokLabel}">${IC.tiktok}</a>
         </div>
       </div>
@@ -315,8 +318,9 @@
     <div class="footer__bottom">
       <p class="footer__copy">${t.copy}</p>
       <nav class="footer__legal" aria-label="${t.legalNavLabel}">
-        <a href="${t.impressumHref}"    class="footer__legal-link">Impressum</a>
-        <a href="${t.datenschutzHref}"  class="footer__legal-link">Datenschutz</a>
+        <a href="${t.impressumHref}"     class="footer__legal-link">Impressum</a>
+        <a href="${t.datenschutzHref}"   class="footer__legal-link">Datenschutz</a>
+        <a href="${t.instagramLegalHref}" class="footer__legal-link">Instagram</a>
       </nav>
       ${buildLangSwitch(t.langFooterLabel)}
       <p class="footer__made-by">${t.madeby}</p>
@@ -404,7 +408,6 @@
     var footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) footerPlaceholder.outerHTML = buildFooter();
     initBehavior();
-    initCookieConsent();
   }
 
   if (document.readyState === 'loading') {
@@ -413,62 +416,10 @@
     onReady();
   }
 
-  /* ── Cookie Consent (Google Fonts) ───────────────────────────── */
-  var CONSENT_KEY = 'pm_cookie_consent';
-
-  function loadGoogleFonts() {
-    if (document.getElementById('pm-gfonts')) return;
-    var link = document.createElement('link');
-    link.id   = 'pm-gfonts';
-    link.rel  = 'stylesheet';
-    link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap';
-    document.head.appendChild(link);
-  }
-
-  function initCookieConsent() {
-    var stored = localStorage.getItem(CONSENT_KEY);
-    if (stored === 'accepted') { loadGoogleFonts(); return; }
-    if (stored === 'declined') { return; }
-    showCookieBanner();
-  }
-
-  function showCookieBanner() {
-    var isDE = lang === 'de';
-    var isUA = lang === 'ua';
-    var privacyUrl = './datenschutz.html';
-    var text = isDE
-      ? 'Diese Website nutzt <a href="' + privacyUrl + '">Google&nbsp;Fonts</a> von externen Servern. Dabei wird Ihre IP-Adresse an Google übertragen. Bitte stimmen Sie zu oder lehnen Sie ab.'
-      : isUA
-        ? 'Цей сайт використовує <a href="' + privacyUrl + '">Google&nbsp;Fonts</a> із зовнішніх серверів. При цьому ваша IP-адреса передається Google. Погодьтесь або відмовтесь.'
-        : 'Этот сайт использует <a href="' + privacyUrl + '">Google&nbsp;Fonts</a> с внешних серверов. При этом ваш IP-адрес передаётся Google. Примите или откажитесь.';
-    var acceptLabel  = isDE ? 'Zustimmen'  : isUA ? 'Погодитись'  : 'Принять';
-    var declineLabel = isDE ? 'Ablehnen'   : isUA ? 'Відхилити'   : 'Отказаться';
-    var dialogLabel  = isDE ? 'Cookie-Einstellungen' : isUA ? 'Налаштування cookies' : 'Настройки cookies';
-
-    var banner = document.createElement('div');
-    banner.className = 'pm-cookie-banner';
-    banner.id = 'pm-cookie-banner';
-    banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-label', dialogLabel);
-    banner.innerHTML =
-      '<div class="pm-cookie-inner">' +
-        '<p class="pm-cookie-text">' + text + '</p>' +
-        '<div class="pm-cookie-actions">' +
-          '<button class="pm-cookie-btn pm-cookie-btn--accept" id="pm-accept">' + acceptLabel + '</button>' +
-          '<button class="pm-cookie-btn pm-cookie-btn--decline" id="pm-decline">' + declineLabel + '</button>' +
-        '</div>' +
-      '</div>';
-    document.body.appendChild(banner);
-
-    document.getElementById('pm-accept').addEventListener('click', function () {
-      localStorage.setItem(CONSENT_KEY, 'accepted');
-      loadGoogleFonts();
-      banner.remove();
-    });
-    document.getElementById('pm-decline').addEventListener('click', function () {
-      localStorage.setItem(CONSENT_KEY, 'declined');
-      banner.remove();
-    });
-  }
+  /* ── Clear the retired Google-Fonts consent flag ──────────────────
+     Fonts, GSAP and Swiper are served from our own domain now, so the
+     site makes no third-party requests and needs no consent. Drop the
+     old localStorage entry from returning visitors' browsers.        */
+  try { localStorage.removeItem('pm_cookie_consent'); } catch (e) {}
 
 })();
