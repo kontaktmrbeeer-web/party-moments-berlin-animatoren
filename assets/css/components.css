@@ -99,21 +99,29 @@ body { padding-top: 72px; }
   text-decoration: none;
   flex-shrink: 0;
 }
-.navbar__logo-icon {
-  width: 30px;
-  height: 30px;
-  color: var(--color-yellow);
+/* The wordmark is artwork, so width follows height — the global
+   `img { height: auto }` would otherwise size it from the file. */
+.navbar__logo-img {
+  height: 32px;
+  width: auto;
+  max-width: none;
   flex-shrink: 0;
 }
-.navbar__logo-text {
+/* "Berlin" is not part of the artwork. Set quiet and small so it reads as
+   the locality on a lockup rather than competing with the plush lettering.
+   The artwork's baseline sits at 78% of its height, not at the bottom edge —
+   the y of "Party" hangs below it — so centring leaves the locality floating
+   above the line. The nudge puts the two on one baseline. */
+.navbar__logo-city {
+  transform: translateY(4px);
   font-family: var(--font-heading);
-  font-size: 1.0625rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--color-white);
-  letter-spacing: -0.015em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-lavender);
   white-space: nowrap;
 }
-.navbar__logo-city { color: var(--color-lavender); }
 
 /* --- Desktop nav links ------------------------------------------ */
 .navbar__links {
@@ -431,19 +439,22 @@ body.menu-open { overflow: hidden; }
   text-decoration: none;
   margin-bottom: var(--sp-4);
 }
-.footer__logo-icon {
-  width: 28px;
-  height: 28px;
-  color: var(--color-yellow);
+.footer__logo-img {
+  height: 30px;
+  width: auto;
+  max-width: none;
   flex-shrink: 0;
 }
-.footer__logo-text {
+.footer__logo-city {
+  transform: translateY(4px);   /* see .navbar__logo-city */
   font-family: var(--font-heading);
-  font-size: var(--fs-md);
+  font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--color-white);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-lavender);
+  white-space: nowrap;
 }
-.footer__logo-city { color: var(--color-lavender); }
 
 .footer__tagline {
   font-size: var(--fs-sm);
@@ -623,7 +634,9 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (max-width: 480px) {
-  .navbar__logo-text {
-    font-size: var(--fs-sm);
-  }
+  /* Narrow phones have to fit the lockup beside the language switch, the
+     WhatsApp icon and the hamburger. The wordmark carries the brand on its
+     own, so the locality is what gives way. */
+  .navbar__logo-img { height: 26px; }
+  .navbar__logo-city { display: none; }
 }

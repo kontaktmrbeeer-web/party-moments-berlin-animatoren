@@ -947,18 +947,6 @@
 .arch:hover .arch__label { background: rgba(124, 58, 237, 0.8); }
 .arch--adult:hover .arch__label { background: rgba(219, 39, 119, 0.7); }
 
-/* Gold sparkle, echoing the logo mark. Decorative only. */
-.home-hero__sparkle {
-  position: absolute;
-  top: 6%;
-  right: 2%;
-  width: 34px;
-  height: 34px;
-  color: var(--color-yellow);
-  opacity: 0.85;
-  pointer-events: none;
-}
-
 /* ── Audience switch ───────────────────────────────────────────
    Desktop shows both doorways at once. A phone has room for one,
    so the switch picks which one — and the headline follows it.
@@ -1010,8 +998,6 @@
   .arch[hidden] { display: none; }
   /* The switch already names the audience; the pill would just repeat it. */
   .arch__label { display: none; }
-
-  .home-hero__sparkle { top: 2%; right: 4%; width: 28px; height: 28px; }
 }
 
 /* The switch is a progressive enhancement: without scripting both
