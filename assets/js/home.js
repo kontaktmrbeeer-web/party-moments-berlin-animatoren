@@ -18,29 +18,33 @@
     finalCTA();
   }
 
-  /* ── Hero parallax scroll reveal ── */
+  /* ── Hero entrance ──
+     The hero no longer pins or scrubs: it is two doorways the visitor
+     picks between, so it just arrives and then stays out of the way. */
   function heroAnimations() {
-    /* Video visible on load — content hidden until scroll */
-    gsap.set('.hero__overlay', { opacity: 0 });
-    gsap.set('.hero__content', { opacity: 0, y: 70 });
+    var hero = document.querySelector('.home-hero');
+    if (!hero) return;
 
-    /* Scroll arrow visible from start to hint interaction */
-    gsap.from('.hero__scroll', { opacity: 0, duration: 1.2, delay: 0.8, ease: 'power2.out' });
+    /* GSAP does not read the CSS media query, so check it here too. */
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    /* Scroll-linked: hero pinned while overlay darkens + content slides in */
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: '+=520',
-        scrub: 0.7,
-        pin: true,
-        anticipatePin: 1,
-      }
-    })
-    .to('.hero__overlay',      { opacity: 1, ease: 'none' }, 0)
-    .to('.hero__overlay-dark', { opacity: 1, ease: 'none' }, 0)
-    .to('.hero__content',      { opacity: 1, y: 0, ease: 'power2.out' }, 0.1);
+    var targets = '.home-hero__text > *, .home-hero__arches .arch';
+
+    var tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+      .from('.home-hero__text > *', { opacity: 0, y: 24, duration: 0.6, stagger: 0.07 })
+      .from('.home-hero__arches .arch', { opacity: 0, y: 32, duration: 0.7, stagger: 0.09 }, '-=0.35');
+
+    /* gsap.from() parks these at opacity 0 the moment the tween is built and
+       only lifts it as the ticker runs. Where requestAnimationFrame is
+       throttled — background tab, occluded window, power saving — the hero
+       would be left half-faded or fully invisible. The timeline needs ~1.5s,
+       so if it has not finished well past that, snap it to its end state.
+       What matters is that the content is visible, not how it got there. */
+    setTimeout(function () {
+      if (tl.progress() === 1) return;
+      tl.progress(1).kill();
+      gsap.set(targets, { clearProps: 'all' });
+    }, 2500);
   }
 
   /* ── About section ── */

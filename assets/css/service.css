@@ -76,7 +76,7 @@
   color: var(--color-lavender);
   flex-shrink: 0;
 }
-.included__text h4 {
+.included__text h3 {
   font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--color-white);

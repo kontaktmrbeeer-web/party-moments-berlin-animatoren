@@ -2,140 +2,136 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- ── DE Homepage ── -->
+  <!-- Generated from the files on disk. Legal pages are noindex and omitted. -->
+
   <url>
     <loc>https://party-moments-animatoren.de/de/</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/"/>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- ── RU Homepage ── -->
   <url>
     <loc>https://party-moments-animatoren.de/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/"/>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- ── UA Homepage ── -->
   <url>
     <loc>https://party-moments-animatoren.de/ua/</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/"/>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- ── DE Service Pages ── -->
   <url>
     <loc>https://party-moments-animatoren.de/de/animatoren-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/animatory-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/animatory-berlin"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/animatory-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/animatory-berlin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/sladkie-bukety-podarochnye-boksy-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/solodki-bukety-podarunkovi-boksy-berlin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin"/>
-    <lastmod>2026-06-21</lastmod>
+    <loc>https://party-moments-animatoren.de/ru/animatory-berlin</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/animatory-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/animatory-berlin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://party-moments-animatoren.de/ua/animatory-berlin</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/animatory-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/animatory-berlin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://party-moments-animatoren.de/de/jga-polizist-berlin</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/jga-polizist-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/politseyskiy-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/politseyskyi-berlin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/jga-polizist-berlin"/>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://party-moments-animatoren.de/ru/politseyskiy-berlin</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/jga-polizist-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/politseyskiy-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/politseyskyi-berlin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/jga-polizist-berlin"/>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://party-moments-animatoren.de/ua/politseyskyi-berlin</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/jga-polizist-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/politseyskiy-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/politseyskyi-berlin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/jga-polizist-berlin"/>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://party-moments-animatoren.de/de/kostuemverleih-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/orenda-kostyumiv-berlin"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/orenda-kostyumiv-berlin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ── RU Service Pages ── -->
-  <url>
-    <loc>https://party-moments-animatoren.de/ru/animatory-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/animatory-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/animatory-berlin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://party-moments-animatoren.de/ru/sladkie-bukety-podarochnye-boksy-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/sladkie-bukety-podarochnye-boksy-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/solodki-bukety-podarunkovi-boksy-berlin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin"/>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/orenda-kostyumiv-berlin"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/orenda-kostyumiv-berlin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ── UA Service Pages ── -->
-  <url>
-    <loc>https://party-moments-animatoren.de/ua/animatory-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/animatory-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/animatory-berlin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/animatoren-berlin"/>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://party-moments-animatoren.de/ua/solodki-bukety-podarunkovi-boksy-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/sladkie-bukety-podarochnye-boksy-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/solodki-bukety-podarunkovi-boksy-berlin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/suesse-straeusse-geschenkboxen-berlin"/>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://party-moments-animatoren.de/ua/orenda-kostyumiv-berlin</loc>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin"/>
-    <xhtml:link rel="alternate" hreflang="uk"        href="https://party-moments-animatoren.de/ua/orenda-kostyumiv-berlin"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://party-moments-animatoren.de/ru/arenda-kostyumov-berlin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://party-moments-animatoren.de/ua/orenda-kostyumiv-berlin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://party-moments-animatoren.de/de/kostuemverleih-berlin"/>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

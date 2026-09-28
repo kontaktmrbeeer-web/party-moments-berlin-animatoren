@@ -41,7 +41,7 @@
 
     mask: `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/><path d="M3 21v-1a9 9 0 0118 0v1"/></svg>`,
 
-    gift: `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>`,
+    badge: `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2l7 3v6c0 4.5-3 8.3-7 11-4-2.7-7-6.5-7-11V5l7-3z"/><path d="M12 8.4l1.05 2.12 2.35.34-1.7 1.65.4 2.34L12 13.79l-2.1 1.1.4-2.34-1.7-1.65 2.35-.34z"/></svg>`,
 
     costume: `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg>`,
   };
@@ -61,8 +61,8 @@
       langNavLabel:    'Sprache wählen',
       aboutHref:       './index.html#ueber-uns',
       services: [
-        { href: './animatoren-berlin.html',                          icon: 'mask',    text: 'Animatoren',              desc: 'Maskottchen & Animation' },
-        { href: './suesse-straeusse-geschenkboxen-berlin.html',      icon: 'gift',    text: 'Süße Sträuße & Boxen',    desc: 'Handgemachte Geschenke' },
+        { href: './animatoren-berlin.html',                          icon: 'mask',    text: 'Animatoren',              desc: 'Für Kinder · Maskottchen' },
+        { href: './jga-polizist-berlin.html',                        icon: 'badge',   text: 'JGA & Polizist',          desc: 'Für Erwachsene · Überraschung' },
         { href: './kostuemverleih-berlin.html',                      icon: 'costume', text: 'Kostümverleih',           desc: 'Kostüme & Maskottchen mieten' },
       ],
       /* Footer */
@@ -94,8 +94,8 @@
       langNavLabel:    'Выбор языка',
       aboutHref:       './index.html#o-nas',
       services: [
-        { href: './animatory-berlin.html',                                      icon: 'mask',    text: 'Аниматоры',            desc: 'Ростовые куклы и анимация' },
-        { href: './sladkie-bukety-podarochnye-boksy-berlin.html',               icon: 'gift',    text: 'Сладкие букеты',       desc: 'Ручные подарочные боксы' },
+        { href: './animatory-berlin.html',                                      icon: 'mask',    text: 'Аниматоры',            desc: 'Для детей · ростовые куклы' },
+        { href: './politseyskiy-berlin.html',                                   icon: 'badge',   text: 'Полицейский',          desc: 'Для взрослых · сюрприз' },
         { href: './arenda-kostyumov-berlin.html',                               icon: 'costume', text: 'Аренда костюмов',      desc: 'Костюмы и ростовые куклы' },
       ],
       /* Footer */
@@ -127,8 +127,8 @@
       langNavLabel:    'Вибір мови',
       aboutHref:       './index.html#pro-nas',
       services: [
-        { href: './animatory-berlin.html',        icon: 'mask',    text: 'Аніматори',        desc: 'Ростові ляльки та анімація' },
-        { href: './solodki-bukety-berlin.html',   icon: 'gift',    text: 'Солодкі букети',   desc: 'Подарункові бокси ручної роботи' },
+        { href: './animatory-berlin.html',        icon: 'mask',    text: 'Аніматори',        desc: 'Для дітей · ростові ляльки' },
+        { href: './politseyskyi-berlin.html',     icon: 'badge',   text: 'Поліцейський',     desc: 'Для дорослих · сюрприз' },
         { href: './orenda-kostyumiv-berlin.html', icon: 'costume', text: 'Оренда костюмів',  desc: 'Костюми та ростові ляльки' },
       ],
       tagline:          'Незабутні свята в Берліні та окрузі.',

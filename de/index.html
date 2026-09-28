@@ -5,8 +5,8 @@
   <base href="/de/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Animatoren Berlin – Kindergeburtstag & Events | PartyMoments Berlin</title>
-  <meta name="description" content="PartyMoments Berlin: professionelle Animatoren für Kindergeburtstag, Hochzeit & Firmenfeier in Berlin. Kostümverleih & süße Sträuße. Jetzt WhatsApp-Anfrage ab 25 €.">
+  <title>PartyMoments Berlin – Maskottchen für Kindergeburtstag &amp; JGA</title>
+  <meta name="description" content="Maskottchen und Kostüm-Animatoren in Berlin: für Kindergeburtstage und für Erwachsenen-Partys, JGA und Firmenfeiern. Kostümverleih ab 49 €.">
 
   <meta name="google-site-verification" content="Dyu2uD_c_6PMZ2XP7YMSgqkl_2-Ti7s_f4R0ck803_k" />
   <link rel="canonical" href="https://party-moments-animatoren.de/de/">
@@ -20,7 +20,7 @@
 
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="Animatoren Berlin – Kindergeburtstag & Events | PartyMoments Berlin">
-  <meta property="og:description" content="Professionelle Animatoren, Kostümverleih & süße Sträuße in Berlin – ab 25 €. Jetzt per WhatsApp anfragen!">
+  <meta property="og:description" content="Maskottchen für Kindergeburtstage und Erwachsenen-Partys in Berlin – ab 49 €. Jetzt per WhatsApp anfragen!">
   <meta property="og:url"         content="https://party-moments-animatoren.de/de/">
   <meta property="og:image"       content="https://party-moments-animatoren.de/assets/images/og-home.jpg">
   <meta property="og:image:type"  content="image/jpeg">
@@ -30,10 +30,12 @@
   <meta property="og:site_name"   content="PartyMoments Berlin">
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Animatoren Berlin – Kindergeburtstag & Events | PartyMoments Berlin">
-  <meta name="twitter:description" content="Professionelle Animatoren, Kostümverleih & süße Sträuße in Berlin – ab 25 €.">
+  <meta name="twitter:description" content="Maskottchen für Kindergeburtstage und Erwachsenen-Partys in Berlin – ab 49 €.">
   <meta name="twitter:image"       content="https://party-moments-animatoren.de/assets/images/og-home.jpg">
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/poppins-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/images/arch-kinder.jpg" as="image">
+  <link rel="preload" href="/images/arch-erwachsene.jpg" as="image">
   <link rel="stylesheet" href="/assets/css/fonts.css">
   <link rel="stylesheet" href="/assets/vendor/swiper-bundle.min.css">
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -45,13 +47,13 @@
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "EntertainmentBusiness"],
     "name": "PartyMoments Berlin Animatoren",
-    "description": "Professionelle Animatoren für Kindergeburtstag, Hochzeit und Firmenfeier in Berlin. Kostümverleih und süße Sträuße.",
+    "description": "Maskottchen und Kostüm-Animatoren in Berlin – für Kindergeburtstage sowie für JGA, Erwachsenen-Partys und Firmenfeiern. Dazu Kostümverleih.",
     "telephone": "+4917620488050",
     "url": "https://party-moments-animatoren.de/de/",
     "image": "https://party-moments-animatoren.de/assets/images/og-home.jpg",
     "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
     "areaServed": "Berlin und Umgebung",
-    "priceRange": "ab 25 €",
+    "priceRange": "ab 49 €",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -85,7 +87,7 @@
       {
         "@type": "Question",
         "name": "Was kostet ein Animator für einen Kindergeburtstag in Berlin?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Unsere Animatoren starten ab 105 €. Süße Sträuße und Kostümverleih sind bereits ab 25 € erhältlich. Kontaktieren Sie uns per WhatsApp für ein individuelles Angebot." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Unsere Animatoren starten ab 105 €, das Polizist-Maskottchen für Erwachsene ab 150 €, der Kostümverleih ab 49 €. Kontaktieren Sie uns per WhatsApp für ein individuelles Angebot." }
       },
       {
         "@type": "Question",
@@ -109,65 +111,58 @@
   <main id="main-content">
 
     <!-- ═══════════════════════════════════════════ HERO ═══ -->
-    <section class="hero" aria-label="Willkommen bei PartyMoments Berlin">
-      <div class="hero__media" aria-hidden="true">
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata"
-               data-mob-src="../images/introMob.mp4"
-               data-desk-src="../images/intro.mp4"
-               data-mob-poster="../images/hero-poster-mob.jpg"
-               data-desk-poster="../images/hero-poster.jpg">
-          <source src="../images/intro.mp4" type="video/mp4">
-        </video>
-        <script>
-          /* Pick the poster before first paint. Leaving it out of the markup
-             stops the browser preloading the wrong one and flashing it. */
-          (function () {
-            var v = document.currentScript.previousElementSibling;
-            v.poster = window.matchMedia("(max-width: 768px)").matches
-              ? v.dataset.mobPoster : v.dataset.deskPoster;
-          }());
-        </script>
-        <div class="hero__overlay"></div>
-        <div class="hero__overlay-dark"></div>
-      </div>
+    <section class="home-hero" aria-label="Willkommen bei PartyMoments Berlin">
+      <svg class="home-hero__sparkle" viewBox="0 0 28 28" fill="currentColor" aria-hidden="true"><path d="M14 0 L16.4 10.4 L28 14 L16.4 17.6 L14 28 L11.6 17.6 L0 14 L11.6 10.4 Z"/></svg>
+      <div class="home-hero__inner">
 
-      <div class="hero__content">
-        <span class="hero__tag">
-          <span class="hero__tag-dot" aria-hidden="true"></span>
-          Berlin&nbsp;&amp;&nbsp;Umgebung
-        </span>
+        <div class="home-hero__text">
+          <span class="hero__tag">
+            <span class="hero__tag-dot" aria-hidden="true"></span>
+            ab 49&nbsp;€ · Berlin &amp; Umgebung
+          </span>
 
-        <h1 class="hero__title">
-          Unvergessliche <span class="accent">Party-Momente</span><br>in Berlin
-        </h1>
+          <h1 class="hero__title">
+            Der große <span class="accent">Auftritt</span><br>für jede Party
+          </h1>
 
-        <p class="hero__subtitle">
-          Animatoren, Überraschungen, süße Geschenke und Kostümverleih
-          für Geburtstage, Familienfeiern und besondere Anlässe.
-        </p>
+          <p class="hero__subtitle">
+            Kostüm-Animatoren für Kindergeburtstage, Erwachsenen-Partys, JGA und Firmenfeiern in Berlin.
+          </p>
 
-        <div class="hero__ctas">
-          <a href="https://wa.me/4917620488050?text=Hallo%20PartyMoments%20Berlin%2C%20ich%20m%C3%B6chte%20eine%20Anfrage%20stellen."
-             class="btn btn--primary" target="_blank" rel="noopener noreferrer"
-             aria-label="Jetzt per WhatsApp anfragen">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.555 4.122 1.528 5.852L0 24l6.335-1.498A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.025-1.381l-.36-.214-3.758.888.944-3.656-.235-.375A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/>
-            </svg>
-            Jetzt per WhatsApp anfragen
+          <div class="hero__ctas">
+            <a href="https://wa.me/4917620488050?text=Hallo%20PartyMoments%20Berlin%2C%20ich%20m%C3%B6chte%20eine%20Anfrage%20stellen."
+               class="btn btn--primary" target="_blank" rel="noopener noreferrer"
+               aria-label="Jetzt per WhatsApp anfragen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.555 4.122 1.528 5.852L0 24l6.335-1.498A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.025-1.381l-.36-.214-3.758.888.944-3.656-.235-.375A9.818 9.818 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+              Per WhatsApp anfragen
+            </a>
+            <a href="#leistungen" class="btn btn--ghost">
+              Charaktere ansehen
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="home-hero__arches">
+          <a href="./animatoren-berlin.html" class="arch">
+            <span class="arch__frame">
+              <img src="/images/arch-kinder.jpg" alt="Bär-Maskottchen auf einem Kindergeburtstag in Berlin"
+                   width="800" height="1067" fetchpriority="high" class="arch__img">
+            </span>
+            <span class="arch__label">Für Kinder</span>
           </a>
-          <a href="#leistungen" class="btn btn--ghost">
-            Leistungen ansehen
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
+          <a href="./jga-polizist-berlin.html" class="arch arch--adult">
+            <span class="arch__frame">
+              <img src="/images/arch-erwachsene.jpg" alt="Polizist-Maskottchen für JGA und Erwachsenen-Partys in Berlin"
+                   width="800" height="1067" fetchpriority="high" class="arch__img">
+            </span>
+            <span class="arch__label">Für Erwachsene</span>
           </a>
         </div>
-      </div>
 
-      <a href="#ueber-uns" class="hero__scroll" aria-label="Nach unten scrollen">
-        <span class="hero__scroll-arrow" aria-hidden="true"></span>
-      </a>
+      </div>
     </section>
 
     <!-- ═══════════════════════════════════════ ÜBER UNS ═══ -->
@@ -196,9 +191,9 @@
                 ein Leben lang in Erinnerung behaltet.
               </p>
               <p>
-                Ergänzt euer Event mit unserem <strong>Kostümverleih Berlin</strong> oder überrascht
-                eure Liebsten mit einer handgemachten <strong>Geschenkbox Berlin</strong> oder einem
-                <strong>Süßigkeitenstrauß Berlin</strong>. Wir arbeiten in ganz
+                Für Erwachsene haben wir das <strong>Polizist-Maskottchen</strong> – die
+                Überraschung für JGA, Geburtstage und Firmenfeiern. Dazu kommt unser
+                <strong>Kostümverleih Berlin</strong>. Wir arbeiten in ganz
                 <strong>Berlin und Umgebung</strong> – und sprechen Deutsch und Russisch.
               </p>
             </div>
@@ -263,23 +258,21 @@
             </div>
           </article>
 
-          <!-- Card 2: Süße Sträuße -->
-          <article class="service-card" data-card="strauss" >
+          <!-- Card 2: Polizist (Erwachsene) -->
+          <article class="service-card" data-card="polizist" >
             <div class="service-card__media">
-              <video class="service-card__video" autoplay muted loop playsinline preload="none" aria-hidden="true">
-                <source src="../images/strauss.mp4" type="video/mp4">
-              </video>
+              <img class="service-card__img" src="/images/police-card.jpg"
+                   alt="Polizist-Maskottchen von PartyMoments Berlin posiert auf der Straße" width="800" height="1200" loading="lazy">
             </div>
             <div class="service-card__overlay" aria-hidden="true"></div>
             <div class="service-card__content">
-              <span class="service-card__tag">Handgemacht</span>
-              <h3 class="service-card__title">Süße <span class="accent">Sträuße<br>&amp; Geschenkboxen</span></h3>
+              <span class="service-card__tag">Neu</span>
+              <h3 class="service-card__title">Polizist<br><span class="accent">Maskottchen</span></h3>
               <p class="service-card__desc">
-                Handgemachte Süßigkeitensträuße, Geschenkboxen und kreative
-                Überraschungen für besondere Momente.
+                Der falsche Polizist taucht auf, „verhaftet“ das Geburtstagskind — und dann startet die Show. Für JGA, Geburtstage und Firmenfeiern.
               </p>
-              <span class="service-card__price">ab 39&nbsp;€</span>
-              <a href="./suesse-straeusse-geschenkboxen-berlin.html" class="service-card__cta" aria-label="Mehr zu Süßen Sträußen">
+              <span class="service-card__price">ab 150&nbsp;€</span>
+              <a href="./jga-polizist-berlin.html" class="service-card__cta" aria-label="Mehr zum Polizist-Maskottchen für Erwachsene">
                 Mehr erfahren
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7"/>

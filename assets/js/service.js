@@ -13,12 +13,25 @@
   }
 
   function heroAnimations() {
+    var targets = '.hero__tag, .hero__title, .hero__subtitle, .hero__ctas, .hero__scroll';
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
     tl.from('.hero__tag',      { opacity: 0, y: 20, duration: 0.6 })
       .from('.hero__title',    { opacity: 0, y: 36, duration: 0.8 }, '-=0.3')
       .from('.hero__subtitle', { opacity: 0, y: 24, duration: 0.7 }, '-=0.5')
       .from('.hero__ctas',     { opacity: 0, y: 20, duration: 0.6 }, '-=0.4')
       .from('.hero__scroll',   { opacity: 0, duration: 0.5 }, '-=0.2');
+
+    /* gsap.from() writes opacity:0 up front and only lifts it as the ticker
+       runs. Where requestAnimationFrame is throttled the headline would never
+       appear, so snap the timeline to its end if it has not finished in time. */
+    setTimeout(function () {
+      if (tl.progress() === 1) return;
+      tl.progress(1).kill();
+      gsap.set(targets, { clearProps: 'all' });
+    }, 2500);
   }
 
   function scrollReveal() {

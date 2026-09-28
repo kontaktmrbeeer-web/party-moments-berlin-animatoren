@@ -462,12 +462,13 @@
 
 /* Card accent colors */
 .service-card[data-card="animatoren"] .service-card__tag { color: var(--color-pink-soft); }
-.service-card[data-card="strauss"]    .service-card__tag { color: var(--color-yellow); }
+.service-card[data-card="polizist"]   .service-card__tag { color: var(--color-yellow); }
 .service-card[data-card="kostuem"]    .service-card__tag { color: var(--color-lavender); }
 
-/* Strauss card: show bouquet in center of frame, not top */
-.service-card[data-card="strauss"] .service-card__video {
-  object-position: center center;
+/* The police card is a still photo until the video is shot; keep the
+   mascot's head in frame rather than cropping to the top edge. */
+.service-card[data-card="polizist"] .service-card__img {
+  object-position: center 30%;
 }
 
 /* ── Why PartyMoments ───────────────────────────────────────── */
@@ -757,6 +758,8 @@
   .hero { height: calc(100dvh - 60px); min-height: 560px; }
   .hero__content { bottom: var(--sp-6); }
   .hero__subtitle { display: none; }
+  /* ...but the arch hero has no video to make room for. */
+  .home-hero .hero__subtitle { display: block; }
 
   .service-cards { grid-template-columns: 1fr; gap: var(--sp-4); }
   .service-card  { height: 500px; }
@@ -788,4 +791,149 @@
   .about { margin-top: 14px; }
   .services, .why, .reviews { margin-top: 10px; }
   .final-cta { margin-top: 10px; margin-bottom: 16px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Home hero — two arch-framed doorways, one per audience.
+   Deliberately NOT .hero: that class still drives the full-bleed
+   video heroes on the service pages, which share this stylesheet.
+   ══════════════════════════════════════════════════════════════ */
+.home-hero {
+  position: relative;
+  padding: calc(var(--navbar-h, 72px) + var(--sp-12)) 0 var(--sp-16);
+  overflow: hidden;
+}
+
+/* Soft stage lighting behind the arches, no hard edges. */
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(180, 142, 240, 0.20), transparent 46%),
+    radial-gradient(circle at 18% 70%, rgba(219, 39, 119, 0.14), transparent 44%);
+  pointer-events: none;
+}
+
+.home-hero__inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--sp-6);
+  display: grid;
+  gap: var(--sp-12);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .home-hero__inner {
+    grid-template-columns: 1.05fr 1fr;
+    gap: var(--sp-16);
+  }
+}
+
+.home-hero__text .hero__title { margin-bottom: var(--sp-5); }
+.home-hero__text .hero__subtitle { margin-bottom: var(--sp-8); }
+
+/* ── The two doorways ──────────────────────────────────────── */
+.home-hero__arches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+@media (min-width: 900px) {
+  .home-hero__arches { gap: var(--sp-5); }
+}
+
+.arch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+}
+.arch:focus-visible {
+  outline: 2px solid var(--color-lavender);
+  outline-offset: 6px;
+}
+
+.arch__frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  /* Large top radii collapse to a true semicircle at any width. */
+  border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.arch__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+.arch:hover .arch__img { transform: scale(1.05); }
+.arch:active .arch__img { transform: scale(1.02); }
+
+/* Plinth: the arch reads as standing on something. */
+.arch__frame::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 0;
+  height: 5px;
+  border-radius: var(--radius-full) var(--radius-full) 0 0;
+  background: var(--color-lavender);
+  opacity: 0.85;
+}
+.arch--adult .arch__frame::after { background: var(--color-pink-soft); }
+
+.arch__label {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: rgba(124, 58, 237, 0.55);
+  border: 1px solid rgba(180, 142, 240, 0.45);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+.arch--adult .arch__label {
+  background: rgba(219, 39, 119, 0.42);
+  border-color: rgba(244, 114, 182, 0.45);
+}
+.arch:hover .arch__label { background: rgba(124, 58, 237, 0.8); }
+.arch--adult:hover .arch__label { background: rgba(219, 39, 119, 0.7); }
+
+/* Gold sparkle, echoing the logo mark. Decorative only. */
+.home-hero__sparkle {
+  position: absolute;
+  top: 6%;
+  right: 2%;
+  width: 34px;
+  height: 34px;
+  color: var(--color-yellow);
+  opacity: 0.85;
+  pointer-events: none;
+}
+@media (max-width: 899px) { .home-hero__sparkle { display: none; } }
+
+/* Two arches side by side leave ~156px each on a 375px phone, which is
+   narrower than the German label. Let the pill keep one line and shrink
+   rather than wrap into a two-line block that unbalances the pair. */
+@media (max-width: 480px) {
+  .arch__label {
+    padding: 5px 10px;
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
 }

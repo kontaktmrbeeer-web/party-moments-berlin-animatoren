@@ -5,3 +5,6 @@ skills-lock.json
 brief.docx
 .agents/
 .claude/
+
+# Source photography: the site ships the derived crops in images/, not the originals.
+images/policem/

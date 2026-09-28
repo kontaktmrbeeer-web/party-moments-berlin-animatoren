@@ -133,3 +133,19 @@ button {
   white-space: nowrap;
   border: 0;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   Reduced motion — honour the OS setting across the whole site.
+   Scroll-linked and decorative motion stops; nothing disappears.
+   ══════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero__tag-dot { animation: none; }
+}
