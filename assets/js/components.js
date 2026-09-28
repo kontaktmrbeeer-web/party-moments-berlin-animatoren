@@ -195,7 +195,6 @@
     <a href="./index.html" class="navbar__logo" aria-label="${t.logoAriaLabel}">
       <img src="/assets/images/logo-partymoments.png" class="navbar__logo-img"
            width="453" height="112" alt="" fetchpriority="high">
-      <span class="navbar__logo-city">Berlin</span>
     </a>
 
     <ul class="navbar__links" role="list">
@@ -280,7 +279,6 @@
         <a href="./index.html" class="footer__logo" aria-label="${t.logoAriaLabel}">
           <img src="/assets/images/logo-partymoments.png" class="footer__logo-img"
                width="453" height="112" alt="" loading="lazy">
-          <span class="footer__logo-city">Berlin</span>
         </a>
         <p class="footer__tagline">${t.tagline}</p>
         <div class="footer__social">

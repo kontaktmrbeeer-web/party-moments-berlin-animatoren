@@ -95,7 +95,6 @@ body { padding-top: 72px; }
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: var(--sp-2);
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -106,21 +105,6 @@ body { padding-top: 72px; }
   width: auto;
   max-width: none;
   flex-shrink: 0;
-}
-/* "Berlin" is not part of the artwork. Set quiet and small so it reads as
-   the locality on a lockup rather than competing with the plush lettering.
-   The artwork's baseline sits at 78% of its height, not at the bottom edge —
-   the y of "Party" hangs below it — so centring leaves the locality floating
-   above the line. The nudge puts the two on one baseline. */
-.navbar__logo-city {
-  transform: translateY(4px);
-  font-family: var(--font-heading);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-lavender);
-  white-space: nowrap;
 }
 
 /* --- Desktop nav links ------------------------------------------ */
@@ -435,7 +419,6 @@ body.menu-open { overflow: hidden; }
 .footer__logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-2);
   text-decoration: none;
   margin-bottom: var(--sp-4);
 }
@@ -444,16 +427,6 @@ body.menu-open { overflow: hidden; }
   width: auto;
   max-width: none;
   flex-shrink: 0;
-}
-.footer__logo-city {
-  transform: translateY(4px);   /* see .navbar__logo-city */
-  font-family: var(--font-heading);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-lavender);
-  white-space: nowrap;
 }
 
 .footer__tagline {
@@ -634,9 +607,6 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (max-width: 480px) {
-  /* Narrow phones have to fit the lockup beside the language switch, the
-     WhatsApp icon and the hamburger. The wordmark carries the brand on its
-     own, so the locality is what gives way. */
+  /* The wordmark shares the bar with the WhatsApp icon and the hamburger. */
   .navbar__logo-img { height: 26px; }
-  .navbar__logo-city { display: none; }
 }
