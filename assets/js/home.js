@@ -156,4 +156,49 @@
   } else {
     init();
   }
+
+  /* ── Audience switch (phones) ──
+     Desktop shows both doorways side by side. Below 900px only one fits,
+     so the switch chooses which, and the headline tail follows the choice.
+     Deliberately outside init(): this must work whether or not GSAP and
+     Swiper ever load. */
+  (function audienceSwitch() {
+    var root = document.querySelector('.home-hero__switch');
+    if (!root) return;
+
+    var buttons = [].slice.call(root.querySelectorAll('[data-audience]'));
+    var arches  = [].slice.call(document.querySelectorAll('.arch[data-audience]'));
+    var suffix  = document.querySelector('.hero__title-suffix');
+    var mobile  = window.matchMedia('(max-width: 899px)');
+
+    function select(audience) {
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-selected', String(b.dataset.audience === audience));
+      });
+      arches.forEach(function (a) {
+        a.hidden = mobile.matches && a.dataset.audience !== audience;
+      });
+      if (suffix) {
+        suffix.textContent = mobile.matches
+          ? suffix.dataset['suffix' + audience.charAt(0).toUpperCase() + audience.slice(1)]
+          : suffix.dataset.suffixAll;
+      }
+    }
+
+    function current() {
+      var on = buttons.filter(function (b) { return b.getAttribute('aria-selected') === 'true'; })[0];
+      return on ? on.dataset.audience : 'kids';
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { select(b.dataset.audience); });
+    });
+
+    /* Crossing the breakpoint restores both doorways and the neutral headline. */
+    mobile.addEventListener
+      ? mobile.addEventListener('change', function () { select(current()); })
+      : mobile.addListener(function () { select(current()); });
+
+    select(current());
+  }());
 })();

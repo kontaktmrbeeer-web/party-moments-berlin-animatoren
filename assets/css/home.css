@@ -831,17 +831,33 @@
   }
 }
 
+/* Phone follows the reference order: pick an audience, see the doorway,
+   then read the headline that belongs to it. */
+@media (max-width: 899px) {
+  .home-hero__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+  }
+  .home-hero__switch  { order: 1; }
+  .home-hero__arches  { order: 2; }
+  .home-hero__text    { order: 3; }
+}
+
 .home-hero__text .hero__title { margin-bottom: var(--sp-5); }
 .home-hero__text .hero__subtitle { margin-bottom: var(--sp-8); }
 
-/* ── The two doorways ──────────────────────────────────────── */
+/* ── The doorways ──────────────────────────────────────────────
+   An arch is a frame, not a cropped photo: a pale lilac surround
+   with the picture inset, standing on a brighter shelf.
+   ────────────────────────────────────────────────────────────── */
 .home-hero__arches {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--sp-4);
 }
 @media (min-width: 900px) {
-  .home-hero__arches { gap: var(--sp-5); }
+  .home-hero__arches { gap: var(--sp-6); }
 }
 
 .arch {
@@ -854,44 +870,51 @@
 }
 .arch:focus-visible {
   outline: 2px solid var(--color-lavender);
-  outline-offset: 6px;
+  outline-offset: 8px;
 }
 
+/* The frame itself. Padding is the visible lilac border; the extra
+   bottom padding leaves room for the shelf. */
 .arch__frame {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
-  /* Large top radii collapse to a true semicircle at any width. */
-  border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 9px 9px 16px;
+  border-radius: 999px 999px 10px 10px;
+  background: rgba(180, 142, 240, 0.30);
+  box-shadow: inset 0 0 0 1px rgba(214, 191, 255, 0.35);
 }
+
+/* The picture repeats the arch, one step tighter so the frame reads
+   as an even band all the way round. */
 .arch__img {
+  display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center top;
-  display: block;
+  border-radius: 999px 999px 4px 4px;
   transition: transform var(--transition-slow);
 }
-.arch:hover .arch__img { transform: scale(1.05); }
-.arch:active .arch__img { transform: scale(1.02); }
+.arch:hover .arch__img { transform: scale(1.03); }
+.arch:active .arch__img { transform: scale(1.01); }
 
-/* Plinth: the arch reads as standing on something. */
+/* The shelf the arch stands on. */
 .arch__frame::after {
   content: "";
   position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: 0;
-  height: 5px;
-  border-radius: var(--radius-full) var(--radius-full) 0 0;
-  background: var(--color-lavender);
-  opacity: 0.85;
+  left: 9px;
+  right: 9px;
+  bottom: 5px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: #c9b3f5;
 }
-.arch--adult .arch__frame::after { background: var(--color-pink-soft); }
+.arch--adult .arch__frame {
+  background: rgba(244, 114, 182, 0.24);
+  box-shadow: inset 0 0 0 1px rgba(250, 175, 210, 0.35);
+}
+.arch--adult .arch__frame::after { background: #f3a9cf; }
 
 .arch__label {
   display: inline-block;
@@ -924,16 +947,61 @@
   opacity: 0.85;
   pointer-events: none;
 }
-@media (max-width: 899px) { .home-hero__sparkle { display: none; } }
 
-/* Two arches side by side leave ~156px each on a 375px phone, which is
-   narrower than the German label. Let the pill keep one line and shrink
-   rather than wrap into a two-line block that unbalances the pair. */
-@media (max-width: 480px) {
-  .arch__label {
-    padding: 5px 10px;
-    font-size: 0.6875rem;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
+/* ── Audience switch ───────────────────────────────────────────
+   Desktop shows both doorways at once. A phone has room for one,
+   so the switch picks which one — and the headline follows it.
+   ────────────────────────────────────────────────────────────── */
+.home-hero__switch { display: none; }
+
+@media (max-width: 899px) {
+  .home-hero__switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto var(--sp-8);
+    padding: 4px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
   }
+  .home-hero__switch-btn {
+    min-height: 44px;
+    padding: 0 var(--sp-3);
+    border: 0;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: var(--font-base);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+  .home-hero__switch-btn[aria-selected="true"] {
+    background: var(--color-lavender);
+    color: #1b0838;
+  }
+  .home-hero__switch-btn:focus-visible {
+    outline: 2px solid var(--color-white);
+    outline-offset: 2px;
+  }
+
+  /* One doorway at a time, centred and larger than the side-by-side pair. */
+  .home-hero__arches {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .arch { width: 100%; max-width: 280px; }
+  .arch[hidden] { display: none; }
+  /* The switch already names the audience; the pill would just repeat it. */
+  .arch__label { display: none; }
+
+  .home-hero__sparkle { top: 2%; right: 4%; width: 28px; height: 28px; }
 }
+
+/* The switch is a progressive enhancement: without scripting both
+   doorways simply stay on the page. */
+.no-js .home-hero__switch { display: none; }

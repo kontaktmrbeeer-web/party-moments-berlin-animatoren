@@ -115,6 +115,13 @@
       <svg class="home-hero__sparkle" viewBox="0 0 28 28" fill="currentColor" aria-hidden="true"><path d="M14 0 L16.4 10.4 L28 14 L16.4 17.6 L14 28 L11.6 17.6 L0 14 L11.6 10.4 Z"/></svg>
       <div class="home-hero__inner">
 
+        <div class="home-hero__switch" role="tablist" aria-label="Вибір аудиторії">
+          <button type="button" class="home-hero__switch-btn" role="tab"
+                  aria-selected="true" data-audience="kids">Для дітей</button>
+          <button type="button" class="home-hero__switch-btn" role="tab"
+                  aria-selected="false" data-audience="adults">Для дорослих</button>
+        </div>
+
         <div class="home-hero__text">
           <span class="hero__tag">
             <span class="hero__tag-dot" aria-hidden="true"></span>
@@ -122,7 +129,7 @@
           </span>
 
           <h1 class="hero__title">
-            Великий <span class="accent">вихід</span><br>на будь-яке свято
+            Великий <span class="accent">вихід</span><br><span class="hero__title-suffix" data-suffix-all="на будь-яке свято" data-suffix-kids="для дітей" data-suffix-adults="для дорослих">на будь-яке свято</span>
           </h1>
 
           <p class="hero__subtitle">
@@ -146,14 +153,14 @@
         </div>
 
         <div class="home-hero__arches">
-          <a href="./animatory-berlin.html" class="arch">
+          <a href="./animatory-berlin.html" class="arch" data-audience="kids">
             <span class="arch__frame">
               <img src="/images/arch-kinder.jpg" alt="Ростова лялька ведмедя на дитячому дні народження в Берліні"
                    width="800" height="1067" fetchpriority="high" class="arch__img">
             </span>
             <span class="arch__label">Для дітей</span>
           </a>
-          <a href="./politseyskyi-berlin.html" class="arch arch--adult">
+          <a href="./politseyskyi-berlin.html" class="arch arch--adult" data-audience="adults">
             <span class="arch__frame">
               <img src="/images/arch-erwachsene.jpg" alt="Ростова лялька поліцейського для дівич-вечора та дорослих вечірок у Берліні"
                    width="800" height="1067" fetchpriority="high" class="arch__img">
