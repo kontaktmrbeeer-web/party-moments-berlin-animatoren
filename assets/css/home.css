@@ -838,6 +838,10 @@
     display: flex;
     flex-direction: column;
     gap: var(--sp-8);
+    /* The base rule centres on the cross axis, which in a column means
+       shrink-to-fit. The doorway has no intrinsic width any more, so it
+       would collapse to nothing. */
+    align-items: stretch;
   }
   .home-hero__switch  { order: 1; }
   .home-hero__arches  { order: 2; }
@@ -877,44 +881,51 @@
   outline-offset: 8px;
 }
 
-/* The frame itself. Padding is the visible lilac border; the extra
-   bottom padding leaves room for the shelf. */
+/* Two arches, not one frame: a solid pale arch sits behind, pushed down and
+   to the right, and the photograph is an arch laid over it up and to the left.
+   The pale one therefore shows only along the right edge and the foot — the
+   offset is what makes it read as a doorway rather than a border. */
 .arch__frame {
   position: relative;
   display: block;
+  /* The photo inside is absolutely positioned and so contributes no size.
+     Stretch across the column instead of letting align-items:center shrink
+     this to nothing. */
+  align-self: stretch;
   width: 100%;
-  padding: 9px 9px 16px;
-  border-radius: 999px 999px 10px 10px;
+  aspect-ratio: 3 / 4;
+  --arch-offset: 14px;
+}
+
+/* The pale arch behind. */
+.arch__frame::before {
+  content: "";
+  position: absolute;
+  inset: var(--arch-offset) 0 0 var(--arch-offset);
+  border-radius: 999px 999px 8px 8px;
   background: #b9a7e6;
 }
 
-/* The picture repeats the arch, one step tighter so the frame reads
-   as an even band all the way round. */
+/* The photograph in front, offset the other way. */
 .arch__img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Sized explicitly rather than by inset: the global
+     "img { max-width:100%; height:auto }" resolves an absolutely positioned
+     image from its intrinsic ratio and ignores the bottom offset. */
+  width: calc(100% - var(--arch-offset));
+  height: calc(100% - var(--arch-offset));
+  max-width: none;
   object-fit: cover;
   object-position: center top;
-  border-radius: 999px 999px 4px 4px;
+  border-radius: 999px 999px 8px 8px;
   transition: transform var(--transition-slow);
 }
-.arch:hover .arch__img { transform: scale(1.03); }
-.arch:active .arch__img { transform: scale(1.01); }
+.arch:hover .arch__img { transform: translate(-2px, -2px); }
+.arch:active .arch__img { transform: translate(0, 0); }
 
-/* The shelf the arch stands on. */
-.arch__frame::after {
-  content: "";
-  position: absolute;
-  left: 9px;
-  right: 9px;
-  bottom: 5px;
-  height: 6px;
-  border-radius: var(--radius-full);
-  background: #e2d7fb;
-}
-.arch--adult .arch__frame { background: #eda6c9; }
-.arch--adult .arch__frame::after { background: #fbd5e6; }
+.arch--adult .arch__frame::before { background: #eda6c9; }
 
 .arch__label {
   display: inline-block;
@@ -994,6 +1005,7 @@
     grid-template-columns: 1fr;
     justify-items: center;
   }
+  .home-hero__arches > .arch { justify-self: center; width: 100%; }
   .arch { width: 100%; max-width: 280px; }
   .arch[hidden] { display: none; }
   /* The switch already names the audience; the pill would just repeat it. */
